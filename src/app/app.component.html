@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <div class="fill-remaining-space">USER LIST</div>
+    <div class="fill-remaining-space">
+      <button style="background: transparent;" (click)="create()" mat-button class="bg-accent-700 hover:bg-grey text-white py-2 rounded inline-flex items-center"
+      mat-flat-button>
+      Create User
+      <mat-icon>people_outline</mat-icon>  </button>
+    </div>
+  </mat-toolbar>
+  <div style="display: inline-flex">
+    <div *ngFor="let data of dataSource;index as i" style="margin: 2rem;">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header style="height: 5rem;">
+            <mat-panel-title>
+              {{data.name}}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{data.email}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <h4>PHONE NUMBER:    {{data.phone}}</h4>
+          <h4>COUNTRY: {{data.address}}</h4>
+          <button mat-raised-button (click)="deletePerson(i)"><mat-icon aria-hidden="false" aria-label="Delete" fontIcon="delete">Delete</mat-icon></button>            
+          <button style="float: right;" mat-raised-button (click)="openForm(data, i)"><mat-icon aria-hidden="false" aria-label="Edit" fontIcon="edit">Edit User</mat-icon></button>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>

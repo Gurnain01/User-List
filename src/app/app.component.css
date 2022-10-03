@@ -1,0 +1,42 @@
+.mat-form-field{
+    width: 100%;
+  }
+  table{
+    width: 100%;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+	margin-right: -15px;
+    margin-left: -15px;
+}
+.col-12{
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.col-sm-3half, .col-sm-8half {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .col-sm-3half, .col-sm-8half {
+      float: left;
+  }
+  .col-sm-3half {
+      width: 29.16666667%;
+  }
+  .col-sm-8half {
+      width: 70.83333333%;
+  }
+}
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
