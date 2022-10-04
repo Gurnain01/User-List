@@ -37,7 +37,7 @@ export class PersonFormComponent{
     this.uploadedImage = event.target.files[0];
   }
 
-  onFormSubmit(form:NgForm)  
+  onFormSubmit()  
   {  
     if(this.regiForm.invalid){
       return;
