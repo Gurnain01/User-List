@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  URL: 'https://crudcrud.com/api/06f1b486c6534f6fa7960382814d1358/form',
 };
 
 /*
